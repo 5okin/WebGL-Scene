@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/webgl-debug.js" defer></script>
+        <script src="js/gl-matrix-min.js" defer></script>
+        <title>WebGL Scene</title>
+    </head>
+
+    <body onload="main()">
+        <canvas id="SceneCanvas"></canvas>
+        <script src="js/chair_scene.js" defer></script>
+        <br>
+        <div>
+            <div id="uiContainer">
+                <form id="ui">
+                <input type="radio" name="choice" id="Left-Front-Top">Left-Front-Top</label>
+                <input type="radio" name="choice" id="Left-Front-Bottom">Left-Front-Bottom</label>
+                <input type="radio" name="choice" id="Left-Back-Top">Left-Back-Top</label>
+                <input type="radio" name="choice" id="Left-Back-Bottom">Left-Back-Bottom</label>
+                <input type="radio" name="choice" id="Right-Front-Top">Right-Front-Top</label>
+                <input type="radio" name="choice" id="Right-Front-Bottom">Right-Front-Bottom</label> 
+                <input type="radio" name="choice" id="Right-Back-Top">Right-Back-Top</label>
+                <input type="radio" name="choice" id="Right-Back-Bottom">Right-Back-Bottom</label>
+                </form>
+            </div>
+        </div>
+
+        FoV: <input type="text" id="viewAngle" value="90" autocomplete="off">
+        Camera Distance: <input type="text" id="viewDistance" value="25" autocomplete="off">
+        <br>
+        Chair angle (controlled from scroll wheel):<span id="wrf">0</span><BR>
+        Easter egg counter: <span id="easteregg">0</span>
+        <br>
+        <button id="drawSceneButton" onclick="drawScene()">Re-draw!</button>
+        <button id="startButton" onclick="startAnimation()">Start</button>
+        <button id="stopButton" onclick="stopAnimation()">Stop</button><BR>
+        <!--span>Mouse position x: <span id="mouseX">--</span>,y:<span id="mouseY">--</span-->
+    </body>
+</html>
